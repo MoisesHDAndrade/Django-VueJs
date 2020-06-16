@@ -80,7 +80,7 @@ DATABASES = {
     'default': config(
         'DATABASE_URL',
         default='sqlite:///{}'.format(os.path.join(BASE_DIR, 'db.sqlite3')),
-        cast=db_url),
+        cast=dburl),
 }
 
 
