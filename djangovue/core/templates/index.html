@@ -3,6 +3,7 @@
 {% block nav %}
 	{% include "includes/nav.html" %}
 {% endblock nav %}
+
 {% block main %}
 
 <div id="app">
@@ -10,15 +11,14 @@
 		<h1>Ola</h1>
 		<p>Meu primeiro projeto com django vue</p>
 	</div>
+	
 	<div class="row">
 		<div class="col">
 			<h3>Dados do Vue</h3>
 			<ul>
-				<li v-for="user in users">[[user.username]]</li>
+				<li v-for="user in users":class="{no:user.username=='moises'}">[[user.username]]</li>
 			</ul>
 		</div>
-	</div>
-	<div class="row">
 		<div class="col">
 			<h3>Dados do Django</h3>
 			<ul>
