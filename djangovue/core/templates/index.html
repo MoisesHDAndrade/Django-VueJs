@@ -1,15 +1,31 @@
 {% extends "base.html" %}
 
+{% block nav %}
+	{% include "includes/nav.html" %}
+{% endblock nav %}
 {% block main %}
 
 <div id="app">
-	<div class="jumbotron">
+	<div class="jumbotron ok">
 		<h1>Ola</h1>
 		<p>Meu primeiro projeto com django vue</p>
 	</div>
 	<div class="row">
 		<div class="col">
+			<h3>Dados do Vue</h3>
+			<ul>
+				<li v-for="user in users">[[user.username]]</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
 			<h3>Dados do Django</h3>
+			<ul>
+				{% for user in users %}
+					<li>{{user.username}}</li>
+				{% endfor %}
+			</ul>
 		</div>
 	</div>
 </div>

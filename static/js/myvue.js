@@ -1,4 +1,4 @@
-var app = new Vue{
+var app = new Vue({
 	el: '#app',
 	delimiters: ['[[', ']]'],
 	data:{
@@ -7,4 +7,4 @@ var app = new Vue{
 		{'username':'Francielle'},
 		{'username':'matheus'}]
 	}
-}
+})
